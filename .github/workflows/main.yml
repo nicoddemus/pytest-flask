@@ -11,6 +11,11 @@ jobs:
       fail-fast: false
       matrix:
         python: ["2.7", "3.5", "3.6", "3.7", "3.8"]
+        tox_env: ["py"]
+
+        include:
+          - python: "3.7"
+            tox_env: "pre"
         
     steps:
     - uses: actions/checkout@v1
